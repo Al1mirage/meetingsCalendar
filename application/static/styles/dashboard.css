@@ -1,0 +1,114 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+.site-wrapper.dashboardWrapper {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.dashboardWrapper .sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.dashboardWrapper .navbar-fixed-top {
+  border: 0;
+  background-color: #00796b;
+  color: #fff;
+}
+
+.dashboardWrapper .navbar-inverse .navbar-brand {
+  color: #fff;
+}
+.dashboardWrapper .navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+
+  /*
+   * Sidebar
+   */
+
+/* Hide for mobile, show later */
+.dashboardWrapper .sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .dashboardWrapper .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.dashboardWrapper .nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.dashboardWrapper .nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.dashboardWrapper .nav-sidebar > .active > a,
+.dashboardWrapper .nav-sidebar > .active > a:hover,
+.dashboardWrapper .nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.dashboardWrapper .main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .dashboardWrapper .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.dashboardWrapper .main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.dashboardWrapper .placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.dashboardWrapper .placeholders h4 {
+  margin-bottom: 0;
+}
+.dashboardWrapper .placeholder {
+  margin-bottom: 20px;
+}
+.dashboardWrapper .placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}

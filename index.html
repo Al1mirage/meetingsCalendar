@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="meetingsCalendar">
+<head>
+    <meta charset="UTF-8">
+    <title>Meetings Calendar</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="application/static/styles/cover.css" />
+    <link rel="stylesheet" type="text/css" href="application/static/styles/dashboard.css" />
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="application/app.js"></script>
+    <script type="text/javascript" src="application/config.js"></script>
+    <script type="text/javascript" src="application/libraries/gapi.js"></script>
+    <script type="text/javascript" src="application/controllers/main.js"></script>
+</head>
+<body data-ng-controller="main">
+    <div class="site-wrapper coverWrapper" ng-include="'application/templates/welcome.html'" data-ng-show="!isAuthorized"></div>
+
+    <div class="site-wrapper dashboardWrapper" ng-include="'application/templates/calendar.html'" data-ng-show="isAuthorized"></div>
+</body>
+</html>
